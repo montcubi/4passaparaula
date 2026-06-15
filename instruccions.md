@@ -2,13 +2,18 @@
 
 ## Objectiu
 
-Aquesta aplicació permet fer un joc de repàs de Física i Química de 4t d'ESO amb format de rosco A-Z. Està pensada per utilitzar-se a classe, especialment en una pissarra digital.
+Aquesta aplicació permet fer una competició de Passaparaula de Física i Química de 4t d'ESO amb dos equips:
+
+- un rosco per a l'equip A
+- un rosco diferent per a l'equip B
+
+Cada equip té les seves pròpies paraules i el seu propi temps.
 
 ## Fitxers del projecte
 
-- `index.html`: estructura principal de l'aplicació.
-- `style.css`: disseny visual del joc.
-- `script.js`: funcionament del joc, preguntes i lògica de les rondes.
+- `index.html`: estructura principal de l'aplicació
+- `style.css`: disseny visual del joc
+- `script.js`: lògica del joc, torns, roscos i bancs de preguntes
 
 ## Com obrir el joc
 
@@ -16,47 +21,64 @@ Aquesta aplicació permet fer un joc de repàs de Física i Química de 4t d'ESO
 2. Fes doble clic a `index.html`.
 3. El joc s'obrirà al navegador.
 
-No cal instal·lar res ni utilitzar internet. És una aplicació feta només amb HTML, CSS i JavaScript.
+No cal instal·lar res ni connectar-se a internet.
 
-## Funcionament general
+## Configuració inicial
 
-1. Selecciona la ronda:
-   - Classificatòria
-   - Semifinal A
-   - Semifinal B
-   - Final
-2. Indica el temps total de la partida.
-3. Prem `Començar partida`.
-4. Apareixerà la lletra activa i la seva pista.
-5. Escriu la resposta i prem `Comprovar resposta`.
+Abans de començar, cal indicar:
+
+- la ronda
+- el temps per equip
+- el nom de l'equip A
+- el nom de l'equip B
+
+Les rondes disponibles són:
+
+- Classificatòria
+- Semifinal A
+- Semifinal B
+- Final
+
+## Funcionament del joc
+
+1. Prem `Començar partida`.
+2. Comença l'equip A.
+3. Es mostra la lletra activa del seu rosco i la pista corresponent.
+4. L'equip respon escrivint una sola paraula.
+5. Després de respondre o passar, el torn canvia a l'altre equip.
+6. El joc continua fins que no queden preguntes o s'acaba el temps.
 
 ## Botons disponibles
 
-- `Comprovar resposta`: valida la resposta escrita.
-- `Passaparaula`: deixa la pregunta pendent i la torna a posar al final de la cua.
-- `Marcar com correcta`: marca manualment la lletra com a encertada.
-- `Marcar com incorrecta`: marca manualment la lletra com a errònia.
-- `Reiniciar partida`: torna el joc a l'estat inicial.
+- `Comprovar resposta`: valida la resposta escrita
+- `Passaparaula`: deixa la lletra pendent i la torna al final de la cua del mateix equip
+- `Marcar com correcta`: correcció manual positiva
+- `Marcar com incorrecta`: correcció manual negativa
+- `Reiniciar partida`: torna el joc a l'estat inicial
 
 ## Colors de les lletres
 
-- Verd: resposta correcta.
-- Vermell: resposta incorrecta.
-- Blau clar: pendent.
-- Gris/blau fosc: passada amb `Passaparaula`.
-- Groc: lletra actual.
+- Verd: correcta
+- Vermell: incorrecta
+- Blau clar: pendent
+- Gris: passada amb `Passaparaula`
+- Groc: lletra activa
 
-## Informació que mostra la pantalla
+## Informació que es mostra
 
-- Ronda activa
-- Lletra actual
-- Número de pregunta
-- Pista o definició
-- Puntuació
-- Encerts
-- Errors
-- Preguntes pendents
-- Temps restant
+- ronda activa
+- equip que té el torn
+- lletra actual
+- pista actual
+- encerts de l'equip A
+- errors de l'equip A
+- pendents de l'equip A
+- temps de l'equip A
+- encerts de l'equip B
+- errors de l'equip B
+- pendents de l'equip B
+- temps de l'equip B
+- puntuació dels dos equips
 
 ## Criteri de correcció
 
@@ -64,33 +86,37 @@ El joc accepta les respostes de manera flexible:
 
 - no diferencia entre majúscules i minúscules
 - tolera accents
-- admet algunes respostes alternatives definides al codi
+- admet variants com `joule`, `joules` i `juls`
 
-Per exemple, una resposta amb o sense accent es pot considerar equivalent si està prevista a `script.js`.
+Les respostes estan pensades perquè normalment siguin d'una sola paraula.
 
-## Final de la partida
+## Bancs de preguntes
 
-La partida acaba quan passa una d'aquestes dues coses:
+Cada ronda assigna un banc diferent a cada equip.
 
-- no queden preguntes pendents
-- s'acaba el temps
+En aquesta versió, com que hi ha 4 bancs disponibles, s'han distribuït així:
 
-En acabar, la pantalla mostra la puntuació final.
+- Classificatòria: banc 1 per a l'equip A i banc 2 per a l'equip B
+- Semifinal A: banc 3 per a l'equip A i banc 4 per a l'equip B
+- Semifinal B: banc 2 per a l'equip A i banc 1 per a l'equip B
+- Final: banc 4 per a l'equip A i banc 3 per a l'equip B
 
-## Ús recomanat a classe
-
-- Utilitzar una ronda diferent per a cada fase del concurs.
-- Fer que un alumne o equip respongui oralment mentre una altra persona escriu.
-- Utilitzar els botons manuals si el professor vol validar respostes equivalents no previstes.
+Si vols una assignació diferent, només cal canviar-la a `script.js`.
 
 ## Personalització
 
-Si vols canviar preguntes o respostes:
+Si vols canviar paraules, pistes o distribució de rondes:
 
-1. Obre `script.js`.
-2. Busca l'objecte `questionSets`.
-3. Modifica les pistes o les respostes de cada ronda.
+1. Obre `script.js`
+2. Busca `BANKS`
+3. Modifica les pistes i respostes
+4. Si cal, modifica també `ROUND_ASSIGNMENTS`
 
-## Nota
+## Tipus de pistes afegides
 
-El rosco utilitza les 26 lletres A-Z. En alguns casos, la paraula associada a la lletra és un concepte científic que no necessàriament comença exactament per la grafia catalana habitual, però s'ha mantingut així per adaptar-se al format del joc.
+En aquesta versió també hi ha pistes del tipus:
+
+- element químic del període 2 o 3 i d'un grup concret
+- vocabulari de formulació
+- vocabulari de nomenclatura
+- conceptes com `valència`

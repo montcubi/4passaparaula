@@ -8,36 +8,36 @@ const ROUND_LABELS = {
 
 const clue = (text, answers) => ({ text, answers });
 
-const questionSets = {
-    qualifying: [
+const BANKS = {
+    bank1: [
         clue("Ió amb càrrega elèctrica negativa.", ["anió"]),
         clue("Model atòmic amb electrons en òrbites quantitzades.", ["bohr"]),
         clue("Nombre que indica la proporció d'una substància en una equació química ajustada.", ["coeficient"]),
         clue("Científic que va formular la teoria atòmica moderna escolar.", ["dalton"]),
         clue("Part de la química que estudia les proporcions entre reactius i productes.", ["estequiometria"]),
-        clue("Representació dels elements i subíndexs d'un compost.", ["fórmula"]),
-        clue("Representació visual de dades, molt utilitzada en cinemàtica.", ["gràfica"]),
+        clue("Part de la química que consisteix a escriure correctament les fórmules dels compostos.", ["formulació", "formulacio"]),
+        clue("Representació visual de dades, molt utilitzada en cinemàtica.", ["gràfica", "grafica"]),
         clue("Element químic més lleuger de la taula periòdica.", ["hidrogen"]),
-        clue("Àtom o grup d'àtoms amb càrrega elèctrica.", ["ió"]),
+        clue("Àtom o grup d'àtoms amb càrrega elèctrica.", ["ió", "io"]),
         clue("Unitat d'energia del Sistema Internacional.", ["joule", "joules", "juls"]),
         clue("Escala absoluta de temperatura.", ["kelvin"]),
-        clue("Científic relacionat amb la llei de conservació de la massa.", ["lavoisier"]),
+        clue("Científic relacionat amb la teoria atòmica moderna.", ["dalton"]),
         clue("Unitat de quantitat de substància del Sistema Internacional.", ["mol"]),
-        clue("Partícula subatòmica sense càrrega elèctrica.", ["neutró"]),
-        clue("Regió de l'espai on és probable trobar un electró.", ["orbital"]),
+        clue("Partícula subatòmica sense càrrega elèctrica.", ["neutró", "neutro"]),
+        clue("Element químic del període 3 i grup 17 de la taula periòdica.", ["clor"]),
         clue("Nom general de certes lleis clàssiques de la química.", ["ponderals"]),
-        clue("Ciència que estudia la composició i transformació de la matèria.", ["química"]),
+        clue("Ciència que estudia la composició i transformació de la matèria.", ["química", "quimica"]),
         clue("Substàncies inicials d'una reacció química.", ["reactius"]),
         clue("Element químic no metàl·lic de símbol S.", ["sulfur", "sofre"]),
-        clue("Model atòmic conegut pel descobriment de l'electró en el tub de raigs catòdics.", ["thomson"]),
+        clue("Model atòmic conegut pel descobriment de l'electró.", ["thomson"]),
         clue("Compost binari format per oxigen i un altre element.", ["òxid", "oxid"]),
         clue("Magnitud que indica l'espai recorregut per unitat de temps i direcció.", ["velocitat"]),
         clue("Unitat de potència del Sistema Internacional.", ["watt"]),
         clue("Àcid oxigenat format per hidrogen, oxigen i un altre element.", ["oxoàcid", "oxoacid"]),
-        clue("Element químic de símbol Y.", ["itri"]),
+        clue("Element químic del període 3 i grup 13 de la taula periòdica.", ["alumini"]),
         clue("Element químic metàl·lic de símbol Zn.", ["zinc"])
     ],
-    semifinalA: [
+    bank2: [
         clue("Canvi de velocitat per unitat de temps.", ["acceleració", "acceleracio"]),
         clue("Cognom del científic que va proposar els nivells energètics de l'àtom.", ["bohr"]),
         clue("Factor numèric que acompanya una fórmula química en una equació ajustada.", ["coeficient"]),
@@ -51,7 +51,7 @@ const questionSets = {
         clue("Element químic de símbol K.", ["potassi"]),
         clue("Instrument de laboratori per mesurar volums de líquids.", ["proveta"]),
         clue("Diagrama utilitzat per distribuir els electrons en capes i subnivells.", ["moeller", "möller"]),
-        clue("Part central de l'àtom.", ["nucli"]),
+        clue("Conjunt de regles per posar nom als compostos químics.", ["nomenclatura"]),
         clue("Trajectòria definida dels electrons en el model de Bohr.", ["òrbita", "orbita"]),
         clue("Partícula subatòmica amb càrrega positiva.", ["protó", "proto"]),
         clue("Disciplina que permet calcular quantitats de substància en una reacció.", ["estequiometria"]),
@@ -62,10 +62,10 @@ const questionSets = {
         clue("Magnitud vectorial que expressa el canvi de posició per unitat de temps.", ["velocitat"]),
         clue("Cognom associat a la unitat de potència.", ["watt"]),
         clue("Àcid que conté oxigen a la seva fórmula.", ["oxoàcid", "oxoacid"]),
-        clue("Element químic de símbol Y.", ["itri"]),
+        clue("Element químic del període 3 i grup 2 de la taula periòdica.", ["magnesi"]),
         clue("Element metàl·lic de símbol Zn.", ["zinc"])
     ],
-    semifinalB: [
+    bank3: [
         clue("Partícula que constitueix la matèria i conserva les propietats d'un element.", ["àtom", "atom"]),
         clue("Cognom del científic del model d'òrbites quantitzades.", ["bohr"]),
         clue("Quantitat de solut dissolta en una determinada quantitat de dissolució.", ["concentració", "concentracio"]),
@@ -87,13 +87,13 @@ const questionSets = {
         clue("Element químic de símbol S.", ["sulfur", "sofre"]),
         clue("Cognom del model atòmic del púding de panses.", ["thomson"]),
         clue("Substància obtinguda al final d'una reacció química.", ["producte"]),
-        clue("Magnitud que expressa el desplaçament per unitat de temps.", ["velocitat"]),
+        clue("Capacitat de combinació d'un element en formar compostos.", ["valència", "valencia"]),
         clue("Unitat de potència elèctrica o mecànica.", ["watt"]),
         clue("Compost binari d'oxigen amb un altre element.", ["òxid", "oxid"]),
-        clue("Acceleració amb què la Terra atrau els cossos.", ["gravetat"]),
+        clue("Element químic del període 3 i grup 1 de la taula periòdica.", ["sodi"]),
         clue("Element químic metàl·lic de símbol Zn.", ["zinc"])
     ],
-    final: [
+    bank4: [
         clue("Partícula bàsica que conserva les propietats d'un element.", ["àtom", "atom"]),
         clue("Cognom del científic del model amb nivells energètics.", ["bohr"]),
         clue("Nombre que acompanya les substàncies en una equació química ajustada.", ["coeficient"]),
@@ -108,7 +108,7 @@ const questionSets = {
         clue("Unitat de capacitat molt utilitzada al laboratori.", ["litre"]),
         clue("Diagrama utilitzat per ordenar la configuració electrònica.", ["moeller", "möller"]),
         clue("Part central de l'àtom on es concentra gairebé tota la massa.", ["nucli"]),
-        clue("Regió de probabilitat de localització electrònica.", ["orbital"]),
+        clue("Element químic del període 3 i grup 14 de la taula periòdica.", ["silici"]),
         clue("Nom general de certes lleis clàssiques de la química.", ["ponderals"]),
         clue("Ciència que estudia la matèria i els seus canvis.", ["química", "quimica"]),
         clue("Científic que va descriure un model nuclear de l'àtom.", ["rutherford"]),
@@ -117,19 +117,28 @@ const questionSets = {
         clue("Compost binari de l'oxigen amb un altre element.", ["òxid", "oxid"]),
         clue("Magnitud que relaciona espai recorregut i temps.", ["velocitat"]),
         clue("Unitat de potència del Sistema Internacional.", ["watt"]),
-        clue("Àcid que conté oxigen a la seva composició.", ["oxoàcid", "oxoacid"]),
-        clue("Tipus de moviment que segueix una trajectòria en línia recta.", ["rectilini"]),
+        clue("Element químic del període 3 i grup 15 de la taula periòdica.", ["fòsfor", "fosfor"]),
+        clue("Element químic del període 3 i grup 16 de la taula periòdica.", ["sofre", "sulfur"]),
         clue("Element químic de símbol Zn.", ["zinc"])
     ]
+};
+
+const ROUND_ASSIGNMENTS = {
+    qualifying: { A: BANKS.bank1, B: BANKS.bank2 },
+    semifinalA: { A: BANKS.bank3, B: BANKS.bank4 },
+    semifinalB: { A: BANKS.bank2, B: BANKS.bank1 },
+    final: { A: BANKS.bank4, B: BANKS.bank3 }
 };
 
 const roundSelect = document.getElementById("roundSelect");
 const minutesInput = document.getElementById("minutesInput");
 const secondsInput = document.getElementById("secondsInput");
+const teamANameInput = document.getElementById("teamAName");
+const teamBNameInput = document.getElementById("teamBName");
 const startButton = document.getElementById("startButton");
 const resetButton = document.getElementById("resetButton");
 const roundTitle = document.getElementById("roundTitle");
-const gameState = document.getElementById("gameState");
+const currentTurn = document.getElementById("currentTurn");
 const currentLetter = document.getElementById("currentLetter");
 const questionIndex = document.getElementById("questionIndex");
 const questionText = document.getElementById("questionText");
@@ -140,32 +149,30 @@ const markCorrectButton = document.getElementById("markCorrectButton");
 const markIncorrectButton = document.getElementById("markIncorrectButton");
 const feedbackBox = document.getElementById("feedbackBox");
 const feedbackText = document.getElementById("feedbackText");
-const rosco = document.getElementById("rosco");
-const timerDisplay = document.getElementById("timerDisplay");
-const scoreValue = document.getElementById("scoreValue");
-const correctValue = document.getElementById("correctValue");
-const incorrectValue = document.getElementById("incorrectValue");
-const pendingValue = document.getElementById("pendingValue");
-const timeValue = document.getElementById("timeValue");
+const roscoA = document.getElementById("roscoA");
+const roscoB = document.getElementById("roscoB");
+const teamATitle = document.getElementById("teamATitle");
+const teamBTitle = document.getElementById("teamBTitle");
+const roscoATitle = document.getElementById("roscoATitle");
+const roscoBTitle = document.getElementById("roscoBTitle");
+const teamAInfo = document.getElementById("teamAInfo");
+const teamBInfo = document.getElementById("teamBInfo");
+const teamACorrect = document.getElementById("teamACorrect");
+const teamAIncorrect = document.getElementById("teamAIncorrect");
+const teamAPending = document.getElementById("teamAPending");
+const teamATimer = document.getElementById("teamATimer");
+const teamBCorrect = document.getElementById("teamBCorrect");
+const teamBIncorrect = document.getElementById("teamBIncorrect");
+const teamBPending = document.getElementById("teamBPending");
+const teamBTimer = document.getElementById("teamBTimer");
+const scoreAValue = document.getElementById("scoreAValue");
+const scoreBValue = document.getElementById("scoreBValue");
+const activeRoscoValue = document.getElementById("activeRoscoValue");
 
-let gameStateData = createInitialState();
+let teams = {};
+let activeTeamId = "A";
 let timerInterval = null;
-
-function createInitialState() {
-    return {
-        roundKey: roundSelect.value,
-        questions: [],
-        statuses: LETTERS.map(() => "pending"),
-        queue: [],
-        currentIndex: -1,
-        correct: 0,
-        incorrect: 0,
-        pending: LETTERS.length,
-        score: 0,
-        timeLeft: 0,
-        running: false
-    };
-}
+let gameRunning = false;
 
 function normalize(text) {
     return text
@@ -177,36 +184,6 @@ function normalize(text) {
         .replace(/\s+/g, " ");
 }
 
-function buildRosco() {
-    rosco.innerHTML = "";
-    const total = LETTERS.length;
-    const radius = 43;
-
-    LETTERS.forEach((letter, index) => {
-        const angle = ((index / total) * Math.PI * 2) - (Math.PI / 2);
-        const x = 50 + radius * Math.cos(angle);
-        const y = 50 + radius * Math.sin(angle);
-        const letterEl = document.createElement("div");
-        letterEl.className = "letter pending";
-        letterEl.dataset.index = String(index);
-        letterEl.textContent = letter;
-        letterEl.style.left = `calc(${x}% - 5.5%)`;
-        letterEl.style.top = `calc(${y}% - 5.5%)`;
-        rosco.appendChild(letterEl);
-    });
-}
-
-function updateRosco() {
-    const letterEls = rosco.querySelectorAll(".letter");
-    letterEls.forEach((letterEl, index) => {
-        letterEl.className = "letter";
-        letterEl.classList.add(gameStateData.statuses[index]);
-        if (index === gameStateData.currentIndex && gameStateData.running) {
-            letterEl.classList.add("current");
-        }
-    });
-}
-
 function formatTime(totalSeconds) {
     const safeSeconds = Math.max(0, totalSeconds);
     const minutes = Math.floor(safeSeconds / 60);
@@ -214,13 +191,85 @@ function formatTime(totalSeconds) {
     return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
 
-function updateStats() {
-    scoreValue.textContent = String(gameStateData.score);
-    correctValue.textContent = String(gameStateData.correct);
-    incorrectValue.textContent = String(gameStateData.incorrect);
-    pendingValue.textContent = String(gameStateData.pending);
-    timeValue.textContent = formatTime(gameStateData.timeLeft);
-    timerDisplay.textContent = formatTime(gameStateData.timeLeft);
+function readSelectedTime() {
+    const minutes = Number.parseInt(minutesInput.value, 10) || 0;
+    const seconds = Number.parseInt(secondsInput.value, 10) || 0;
+    return Math.max(30, (minutes * 60) + Math.min(Math.max(seconds, 0), 59));
+}
+
+function createTeamState(id, name, questions, roscoEl, refs, totalSeconds) {
+    return {
+        id,
+        name,
+        questions,
+        roscoEl,
+        refs,
+        statuses: LETTERS.map(() => "pending"),
+        queue: LETTERS.map((_, index) => index),
+        currentIndex: 0,
+        correct: 0,
+        incorrect: 0,
+        pending: LETTERS.length,
+        score: 0,
+        timeLeft: totalSeconds
+    };
+}
+
+function buildRosco(teamId) {
+    const roscoEl = teams[teamId].roscoEl;
+    roscoEl.innerHTML = "";
+    const radius = 43;
+
+    LETTERS.forEach((letter, index) => {
+        const angle = ((index / LETTERS.length) * Math.PI * 2) - (Math.PI / 2);
+        const x = 50 + radius * Math.cos(angle);
+        const y = 50 + radius * Math.sin(angle);
+        const letterEl = document.createElement("div");
+        letterEl.className = "letter pending";
+        letterEl.id = `letter-${teamId}-${index}`;
+        letterEl.textContent = letter;
+        letterEl.style.left = `calc(${x}% - 6.5%)`;
+        letterEl.style.top = `calc(${y}% - 6.5%)`;
+        roscoEl.appendChild(letterEl);
+    });
+}
+
+function updateRosco(teamId) {
+    const team = teams[teamId];
+    team.roscoEl.querySelectorAll(".letter").forEach((letterEl, index) => {
+        letterEl.className = "letter";
+        letterEl.classList.add(team.statuses[index]);
+        if (gameRunning && teamId === activeTeamId && index === team.currentIndex) {
+            letterEl.classList.add("current");
+        }
+    });
+}
+
+function updatePanels() {
+    const teamA = teams.A;
+    const teamB = teams.B;
+
+    teamATitle.textContent = teamA.name;
+    teamBTitle.textContent = teamB.name;
+    roscoATitle.textContent = `Rosco de ${teamA.name}`;
+    roscoBTitle.textContent = `Rosco de ${teamB.name}`;
+
+    teamACorrect.textContent = String(teamA.correct);
+    teamAIncorrect.textContent = String(teamA.incorrect);
+    teamAPending.textContent = String(teamA.pending);
+    teamATimer.textContent = formatTime(teamA.timeLeft);
+
+    teamBCorrect.textContent = String(teamB.correct);
+    teamBIncorrect.textContent = String(teamB.incorrect);
+    teamBPending.textContent = String(teamB.pending);
+    teamBTimer.textContent = formatTime(teamB.timeLeft);
+
+    scoreAValue.textContent = String(teamA.score);
+    scoreBValue.textContent = String(teamB.score);
+    activeRoscoValue.textContent = activeTeamId;
+
+    teamAInfo.classList.toggle("active", gameRunning && activeTeamId === "A");
+    teamBInfo.classList.toggle("active", gameRunning && activeTeamId === "B");
 }
 
 function setFeedback(type, message) {
@@ -239,50 +288,32 @@ function setControls(enabled) {
     markIncorrectButton.disabled = !enabled;
 }
 
-function readSelectedTime() {
-    const minutes = Number.parseInt(minutesInput.value, 10) || 0;
-    const seconds = Number.parseInt(secondsInput.value, 10) || 0;
-    return Math.max(30, (minutes * 60) + Math.min(Math.max(seconds, 0), 59));
+function isTeamFinished(teamId) {
+    return teams[teamId].pending <= 0 || teams[teamId].queue.length === 0;
 }
 
-function loadCurrentQuestion() {
-    if (gameStateData.currentIndex === -1) {
+function updateQuestionCard() {
+    if (!gameRunning) {
+        return;
+    }
+
+    const team = teams[activeTeamId];
+    const index = team.currentIndex;
+
+    if (index === -1 || typeof team.questions[index] === "undefined") {
         finishGame();
         return;
     }
 
-    const question = gameStateData.questions[gameStateData.currentIndex];
-    const answered = gameStateData.correct + gameStateData.incorrect;
-    const currentNumber = answered + 1;
-
-    roundTitle.textContent = ROUND_LABELS[gameStateData.roundKey];
-    currentLetter.textContent = LETTERS[gameStateData.currentIndex];
-    questionIndex.textContent = `Pregunta ${currentNumber} de ${LETTERS.length}`;
-    questionText.textContent = question.text;
+    currentTurn.textContent = `Torn de ${team.name}`;
+    currentLetter.textContent = LETTERS[index];
+    questionIndex.textContent = `Rosco ${activeTeamId} · ${LETTERS[index]}`;
+    questionText.textContent = team.questions[index].text;
     answerInput.value = "";
     answerInput.focus();
-    gameState.textContent = "Partida en curs.";
-    setFeedback("info", "Resposta pendent de validació.");
-    updateRosco();
-}
-
-function startTimer() {
-    stopTimer();
-    timerInterval = window.setInterval(() => {
-        if (!gameStateData.running) {
-            return;
-        }
-
-        gameStateData.timeLeft -= 1;
-        updateStats();
-
-        if (gameStateData.timeLeft <= 0) {
-            gameStateData.timeLeft = 0;
-            updateStats();
-            setFeedback("error", "S'ha acabat el temps.");
-            finishGame();
-        }
-    }, 1000);
+    updateRosco("A");
+    updateRosco("B");
+    updatePanels();
 }
 
 function stopTimer() {
@@ -292,65 +323,147 @@ function stopTimer() {
     }
 }
 
-function nextQuestion() {
-    gameStateData.currentIndex = gameStateData.queue.length ? gameStateData.queue.shift() : -1;
-    loadCurrentQuestion();
-}
-
-function finishGame() {
-    gameStateData.running = false;
+function startTimer() {
     stopTimer();
-    setControls(false);
-    updateRosco();
-    gameState.textContent = `Partida acabada. Puntuació final: ${gameStateData.score} punts.`;
-    currentLetter.textContent = "-";
-    questionIndex.textContent = `Resoltes ${gameStateData.correct + gameStateData.incorrect} de ${LETTERS.length}`;
-    questionText.textContent = "No queden preguntes pendents en aquesta ronda.";
+    timerInterval = window.setInterval(() => {
+        if (!gameRunning) {
+            return;
+        }
+
+        const team = teams[activeTeamId];
+        team.timeLeft -= 1;
+        if (team.timeLeft < 0) {
+            team.timeLeft = 0;
+        }
+
+        updatePanels();
+
+        if (team.timeLeft === 0) {
+            setFeedback("error", `${team.name} s'ha quedat sense temps.`);
+            team.currentIndex = findNextPlayableIndex(activeTeamId);
+            if (allTeamsFinished()) {
+                finishGame();
+                return;
+            }
+            switchTurn(true);
+        }
+    }, 1000);
 }
 
-function applyResult(result) {
-    const index = gameStateData.currentIndex;
-    if (index === -1 || !gameStateData.running) {
+function findNextPlayableIndex(teamId) {
+    const team = teams[teamId];
+    while (team.queue.length > 0) {
+        const nextIndex = team.queue[0];
+        if (team.statuses[nextIndex] === "pending" || team.statuses[nextIndex] === "passed") {
+            return nextIndex;
+        }
+        team.queue.shift();
+    }
+    return -1;
+}
+
+function allTeamsFinished() {
+    return isTeamFinished("A") && isTeamFinished("B");
+}
+
+function ensureCurrentIndex(teamId) {
+    const team = teams[teamId];
+    team.currentIndex = findNextPlayableIndex(teamId);
+}
+
+function switchTurn(forceOtherTeam = false) {
+    if (!gameRunning) {
         return;
     }
 
-    if (gameStateData.statuses[index] === "pending" || gameStateData.statuses[index] === "passed") {
-        gameStateData.pending -= 1;
-    }
+    stopTimer();
+    ensureCurrentIndex("A");
+    ensureCurrentIndex("B");
 
-    if (result === "correct") {
-        gameStateData.statuses[index] = "correct";
-        gameStateData.correct += 1;
-        gameStateData.score += 1;
-        setFeedback("success", "Resposta correcta.");
-    } else {
-        gameStateData.statuses[index] = "incorrect";
-        gameStateData.incorrect += 1;
-        setFeedback("error", `Resposta incorrecta. Solució: ${gameStateData.questions[index].answers[0]}.`);
-    }
-
-    updateStats();
-    updateRosco();
-
-    if (gameStateData.pending <= 0 || gameStateData.queue.length === 0) {
-        gameStateData.currentIndex = -1;
+    if (allTeamsFinished()) {
         finishGame();
         return;
     }
 
-    nextQuestion();
-}
+    let nextTeamId = activeTeamId;
+    if (forceOtherTeam) {
+        nextTeamId = activeTeamId === "A" ? "B" : "A";
+    }
 
-function checkAnswer() {
-    if (!gameStateData.running || gameStateData.currentIndex === -1) {
+    if (isTeamFinished(nextTeamId) || teams[nextTeamId].timeLeft <= 0) {
+        nextTeamId = nextTeamId === "A" ? "B" : "A";
+    }
+
+    if (isTeamFinished(nextTeamId) || teams[nextTeamId].timeLeft <= 0) {
+        finishGame();
         return;
     }
 
+    activeTeamId = nextTeamId;
+    updateQuestionCard();
+    startTimer();
+}
+
+function removeCurrentFromQueue(teamId) {
+    const team = teams[teamId];
+    const currentIndex = team.currentIndex;
+    const position = team.queue.indexOf(currentIndex);
+    if (position !== -1) {
+        team.queue.splice(position, 1);
+    }
+}
+
+function applyResult(result) {
+    if (!gameRunning) {
+        return;
+    }
+
+    const team = teams[activeTeamId];
+    const index = team.currentIndex;
+    if (index === -1) {
+        return;
+    }
+
+    removeCurrentFromQueue(activeTeamId);
+
+    if (team.statuses[index] === "pending" || team.statuses[index] === "passed") {
+        team.pending -= 1;
+    }
+
+    if (result === "correct") {
+        team.statuses[index] = "correct";
+        team.correct += 1;
+        team.score += 1;
+        setFeedback("success", `${team.name} ha respost correctament.`);
+    } else {
+        team.statuses[index] = "incorrect";
+        team.incorrect += 1;
+        setFeedback("error", `${team.name} ha fallat. Solució: ${team.questions[index].answers[0]}.`);
+    }
+
+    ensureCurrentIndex(activeTeamId);
+    updateRosco(activeTeamId);
+    updatePanels();
+
+    if (allTeamsFinished()) {
+        finishGame();
+        return;
+    }
+
+    switchTurn(true);
+}
+
+function checkAnswer() {
+    if (!gameRunning) {
+        return;
+    }
+
+    const team = teams[activeTeamId];
     const userAnswer = normalize(answerInput.value);
-    const validAnswers = gameStateData.questions[gameStateData.currentIndex].answers.map(normalize);
+    const validAnswers = team.questions[team.currentIndex].answers.map(normalize);
 
     if (!userAnswer) {
-        setFeedback("info", "Escriu una resposta o utilitza els botons de correcció manual.");
+        setFeedback("info", "Escriu una resposta o utilitza la correcció manual.");
         answerInput.focus();
         return;
     }
@@ -364,82 +477,103 @@ function checkAnswer() {
 }
 
 function passQuestion() {
-    if (!gameStateData.running || gameStateData.currentIndex === -1) {
+    if (!gameRunning) {
         return;
     }
 
-    const index = gameStateData.currentIndex;
-    if (gameStateData.statuses[index] === "pending") {
-        gameStateData.statuses[index] = "passed";
+    const team = teams[activeTeamId];
+    const index = team.currentIndex;
+    if (index === -1) {
+        return;
     }
 
-    gameStateData.queue.push(index);
-    setFeedback("info", "Pregunta passada. Tornarà al final de la cua.");
-    updateRosco();
-    nextQuestion();
+    removeCurrentFromQueue(activeTeamId);
+    if (team.statuses[index] === "pending") {
+        team.statuses[index] = "passed";
+    }
+    team.queue.push(index);
+    ensureCurrentIndex(activeTeamId);
+    updateRosco(activeTeamId);
+    updatePanels();
+    setFeedback("info", `${team.name} ha fet passaparaula.`);
+    switchTurn(true);
+}
+
+function finishGame() {
+    gameRunning = false;
+    stopTimer();
+    setControls(false);
+    updateRosco("A");
+    updateRosco("B");
+    updatePanels();
+
+    const teamA = teams.A;
+    const teamB = teams.B;
+    let message = "Partida acabada.";
+
+    if (teamA.score > teamB.score) {
+        message = `Partida acabada. Guanya ${teamA.name}.`;
+    } else if (teamB.score > teamA.score) {
+        message = `Partida acabada. Guanya ${teamB.name}.`;
+    } else {
+        message = "Partida acabada. Hi ha empat.";
+    }
+
+    currentTurn.textContent = message;
+    currentLetter.textContent = "-";
+    questionIndex.textContent = `A ${teamA.score} · B ${teamB.score}`;
+    questionText.textContent = "No queden més preguntes disponibles per als equips.";
+}
+
+function initializeTeams() {
+    const roundKey = roundSelect.value;
+    const totalSeconds = readSelectedTime();
+    const teamAName = teamANameInput.value.trim() || "Equip A";
+    const teamBName = teamBNameInput.value.trim() || "Equip B";
+    const assignment = ROUND_ASSIGNMENTS[roundKey];
+
+    teams = {
+        A: createTeamState("A", teamAName, assignment.A, roscoA, {}, totalSeconds),
+        B: createTeamState("B", teamBName, assignment.B, roscoB, {}, totalSeconds)
+    };
 }
 
 function startGame() {
-    stopTimer();
-    gameStateData = createInitialState();
-    gameStateData.roundKey = roundSelect.value;
-    gameStateData.questions = questionSets[gameStateData.roundKey];
-    gameStateData.statuses = LETTERS.map(() => "pending");
-    gameStateData.queue = LETTERS.map((_, index) => index);
-    gameStateData.currentIndex = 0;
-    gameStateData.correct = 0;
-    gameStateData.incorrect = 0;
-    gameStateData.pending = LETTERS.length;
-    gameStateData.score = 0;
-    gameStateData.timeLeft = readSelectedTime();
-    gameStateData.running = true;
-
-    roundTitle.textContent = ROUND_LABELS[gameStateData.roundKey];
+    initializeTeams();
+    buildRosco("A");
+    buildRosco("B");
+    activeTeamId = "A";
+    gameRunning = true;
+    roundTitle.textContent = ROUND_LABELS[roundSelect.value];
     setControls(true);
-    updateStats();
-    updateRosco();
     setFeedback("info", "Partida iniciada.");
-    nextQuestion();
+    updatePanels();
+    updateQuestionCard();
     startTimer();
 }
 
 function resetGame() {
     stopTimer();
-    gameStateData = createInitialState();
-    gameStateData.timeLeft = readSelectedTime();
-    gameStateData.pending = LETTERS.length;
+    gameRunning = false;
+    initializeTeams();
+    buildRosco("A");
+    buildRosco("B");
     roundTitle.textContent = ROUND_LABELS[roundSelect.value];
-    gameState.textContent = "Prem “Començar partida” per iniciar el rosco.";
+    currentTurn.textContent = "Prem “Començar partida” per iniciar el joc.";
     currentLetter.textContent = "A";
-    questionIndex.textContent = `Pregunta 1 de ${LETTERS.length}`;
-    questionText.textContent = "La pista apareixerà aquí quan comenci la partida.";
+    questionIndex.textContent = "Torn inicial";
+    questionText.textContent = "La pista de la lletra activa apareixerà aquí.";
     answerInput.value = "";
     setControls(false);
     setFeedback("", "Sense resposta registrada encara.");
-    buildRosco();
-    updateStats();
+    updatePanels();
+    updateRosco("A");
+    updateRosco("B");
 }
 
-roundSelect.addEventListener("change", () => {
-    if (!gameStateData.running) {
-        roundTitle.textContent = ROUND_LABELS[roundSelect.value];
-    }
-});
-
-minutesInput.addEventListener("input", () => {
-    if (!gameStateData.running) {
-        gameStateData.timeLeft = readSelectedTime();
-        updateStats();
-    }
-});
-
-secondsInput.addEventListener("input", () => {
-    if (!gameStateData.running) {
-        gameStateData.timeLeft = readSelectedTime();
-        updateStats();
-    }
-});
-
+roundSelect.addEventListener("change", resetGame);
+minutesInput.addEventListener("input", resetGame);
+secondsInput.addEventListener("input", resetGame);
 startButton.addEventListener("click", startGame);
 resetButton.addEventListener("click", resetGame);
 checkButton.addEventListener("click", checkAnswer);
@@ -452,5 +586,4 @@ answerInput.addEventListener("keydown", (event) => {
     }
 });
 
-buildRosco();
 resetGame();

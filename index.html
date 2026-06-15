@@ -10,14 +10,14 @@
     <header class="header">
         <p class="eyebrow">Repàs interactiu de Física i Química</p>
         <h1>Passaparaula de 4t d'ESO</h1>
-        <p class="subtitle">Química i cinemàtica amb format rosco A-Z per a pissarra digital.</p>
+        <p class="subtitle">Competició amb dos roscos independents per a l'equip A i l'equip B.</p>
     </header>
 
     <main class="app-shell">
         <section class="setup-panel">
             <div class="panel-heading">
                 <h2>Configuració de la partida</h2>
-                <p>Selecciona la ronda i inicia el joc. Cada ronda té un banc diferent de preguntes.</p>
+                <p>Escull la ronda, posa nom als equips i inicia la competició.</p>
             </div>
 
             <div class="setup-grid">
@@ -32,13 +32,23 @@
                 </label>
 
                 <label class="field">
-                    <span>Temps total</span>
+                    <span>Temps per equip</span>
                     <div class="time-inputs">
                         <input type="number" id="minutesInput" min="0" max="30" value="8">
                         <small>min</small>
                         <input type="number" id="secondsInput" min="0" max="59" value="0">
                         <small>s</small>
                     </div>
+                </label>
+
+                <label class="field">
+                    <span>Nom equip A</span>
+                    <input type="text" id="teamAName" value="Equip A">
+                </label>
+
+                <label class="field">
+                    <span>Nom equip B</span>
+                    <input type="text" id="teamBName" value="Equip B">
                 </label>
             </div>
 
@@ -48,20 +58,44 @@
             </div>
         </section>
 
+        <section class="teams-bar">
+            <article class="team-card team-a" id="teamAInfo">
+                <h2 id="teamATitle">Equip A</h2>
+                <p class="team-role">Rosco A</p>
+                <div class="team-stats">
+                    <div><span id="teamACorrect">0</span><small>Encerts</small></div>
+                    <div><span id="teamAIncorrect">0</span><small>Errors</small></div>
+                    <div><span id="teamAPending">26</span><small>Pendents</small></div>
+                </div>
+                <div class="team-time" id="teamATimer">08:00</div>
+            </article>
+
+            <article class="team-card team-b" id="teamBInfo">
+                <h2 id="teamBTitle">Equip B</h2>
+                <p class="team-role">Rosco B</p>
+                <div class="team-stats">
+                    <div><span id="teamBCorrect">0</span><small>Encerts</small></div>
+                    <div><span id="teamBIncorrect">0</span><small>Errors</small></div>
+                    <div><span id="teamBPending">26</span><small>Pendents</small></div>
+                </div>
+                <div class="team-time" id="teamBTimer">08:00</div>
+            </article>
+        </section>
+
         <section class="game-layout">
             <section class="info-panel">
                 <div class="status-card">
                     <p class="label">Ronda activa</p>
                     <h2 id="roundTitle">Classificatòria</h2>
-                    <p id="gameState">Prem “Començar partida” per iniciar el rosco.</p>
+                    <p id="currentTurn">Prem “Començar partida” per iniciar el joc.</p>
                 </div>
 
                 <div class="question-card">
                     <div class="question-meta">
                         <span class="letter-badge" id="currentLetter">A</span>
-                        <span id="questionIndex">Pregunta 1 de 26</span>
+                        <span id="questionIndex">Torn inicial</span>
                     </div>
-                    <p id="questionText">La pista apareixerà aquí quan comenci la partida.</p>
+                    <p id="questionText">La pista de la lletra activa apareixerà aquí.</p>
                 </div>
 
                 <label class="answer-card" for="answerInput">
@@ -89,36 +123,34 @@
             </section>
 
             <section class="board-panel">
-                <div class="rosco-panel">
-                    <div class="rosco-wrapper">
-                        <div class="rosco" id="rosco"></div>
-                        <div class="rosco-center">
-                            <span class="center-label">Temps</span>
-                            <strong id="timerDisplay">08:00</strong>
+                <div class="rosco-grid">
+                    <div class="rosco-section">
+                        <h3 id="roscoATitle">Rosco de l'equip A</h3>
+                        <div class="rosco-wrapper">
+                            <div class="rosco team-a" id="roscoA"></div>
+                        </div>
+                    </div>
+
+                    <div class="rosco-section">
+                        <h3 id="roscoBTitle">Rosco de l'equip B</h3>
+                        <div class="rosco-wrapper">
+                            <div class="rosco team-b" id="roscoB"></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="stats-panel">
+                <div class="summary-panel">
                     <div class="stat-card">
-                        <span class="stat-label">Puntuació</span>
-                        <strong class="stat-value" id="scoreValue">0</strong>
+                        <span class="stat-label">Puntuació A</span>
+                        <strong class="stat-value" id="scoreAValue">0</strong>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-label">Encerts</span>
-                        <strong class="stat-value" id="correctValue">0</strong>
+                        <span class="stat-label">Puntuació B</span>
+                        <strong class="stat-value" id="scoreBValue">0</strong>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-label">Errors</span>
-                        <strong class="stat-value" id="incorrectValue">0</strong>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-label">Pendents</span>
-                        <strong class="stat-value" id="pendingValue">26</strong>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-label">Temps restant</span>
-                        <strong class="stat-value" id="timeValue">08:00</strong>
+                        <span class="stat-label">Rosco actiu</span>
+                        <strong class="stat-value" id="activeRoscoValue">A</strong>
                     </div>
                 </div>
             </section>
