@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaparaula - Física i Química 4t d'ESO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <p class="eyebrow">Repàs interactiu de Física i Química</p>
+        <h1>Passaparaula de 4t d'ESO</h1>
+        <p class="subtitle">Química i cinemàtica amb format rosco A-Z per a pissarra digital.</p>
+    </header>
+
+    <main class="app-shell">
+        <section class="setup-panel">
+            <div class="panel-heading">
+                <h2>Configuració de la partida</h2>
+                <p>Selecciona la ronda i inicia el joc. Cada ronda té un banc diferent de preguntes.</p>
+            </div>
+
+            <div class="setup-grid">
+                <label class="field">
+                    <span>Ronda</span>
+                    <select id="roundSelect">
+                        <option value="qualifying">Classificatòria</option>
+                        <option value="semifinalA">Semifinal A</option>
+                        <option value="semifinalB">Semifinal B</option>
+                        <option value="final">Final</option>
+                    </select>
+                </label>
+
+                <label class="field">
+                    <span>Temps total</span>
+                    <div class="time-inputs">
+                        <input type="number" id="minutesInput" min="0" max="30" value="8">
+                        <small>min</small>
+                        <input type="number" id="secondsInput" min="0" max="59" value="0">
+                        <small>s</small>
+                    </div>
+                </label>
+            </div>
+
+            <div class="setup-actions">
+                <button class="btn btn-primary" id="startButton">Començar partida</button>
+                <button class="btn btn-secondary" id="resetButton" type="button">Reiniciar partida</button>
+            </div>
+        </section>
+
+        <section class="game-layout">
+            <section class="info-panel">
+                <div class="status-card">
+                    <p class="label">Ronda activa</p>
+                    <h2 id="roundTitle">Classificatòria</h2>
+                    <p id="gameState">Prem “Començar partida” per iniciar el rosco.</p>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-meta">
+                        <span class="letter-badge" id="currentLetter">A</span>
+                        <span id="questionIndex">Pregunta 1 de 26</span>
+                    </div>
+                    <p id="questionText">La pista apareixerà aquí quan comenci la partida.</p>
+                </div>
+
+                <label class="answer-card" for="answerInput">
+                    <span>Resposta</span>
+                    <input
+                        type="text"
+                        id="answerInput"
+                        placeholder="Escriu la resposta..."
+                        autocomplete="off"
+                        spellcheck="false"
+                        disabled
+                    >
+                </label>
+
+                <div class="controls">
+                    <button class="btn btn-success" id="checkButton" disabled>Comprovar resposta</button>
+                    <button class="btn btn-sky" id="passButton" disabled>Passaparaula</button>
+                    <button class="btn btn-success-alt" id="markCorrectButton" disabled>Marcar com correcta</button>
+                    <button class="btn btn-danger" id="markIncorrectButton" disabled>Marcar com incorrecta</button>
+                </div>
+
+                <div class="feedback-card" id="feedbackBox">
+                    <p id="feedbackText">Sense resposta registrada encara.</p>
+                </div>
+            </section>
+
+            <section class="board-panel">
+                <div class="rosco-panel">
+                    <div class="rosco-wrapper">
+                        <div class="rosco" id="rosco"></div>
+                        <div class="rosco-center">
+                            <span class="center-label">Temps</span>
+                            <strong id="timerDisplay">08:00</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-panel">
+                    <div class="stat-card">
+                        <span class="stat-label">Puntuació</span>
+                        <strong class="stat-value" id="scoreValue">0</strong>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Encerts</span>
+                        <strong class="stat-value" id="correctValue">0</strong>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Errors</span>
+                        <strong class="stat-value" id="incorrectValue">0</strong>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Pendents</span>
+                        <strong class="stat-value" id="pendingValue">26</strong>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Temps restant</span>
+                        <strong class="stat-value" id="timeValue">08:00</strong>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
