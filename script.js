@@ -10,7 +10,7 @@ const clue = (text, answers) => ({ text, answers });
 
 const BANKS = {
     bank1: [
-        clue("Ió amb càrrega elèctrica negativa.", ["anió"]),
+        clue("Espècie química amb càrrega elèctrica negativa.", ["anió"]),
         clue("Model atòmic amb electrons en òrbites quantitzades.", ["bohr"]),
         clue("Nombre que indica la proporció d'una substància en una equació química ajustada.", ["coeficient"]),
         clue("Científic que va formular la teoria atòmica moderna escolar.", ["dalton"]),
@@ -18,12 +18,12 @@ const BANKS = {
         clue("Part de la química que consisteix a escriure correctament les fórmules dels compostos.", ["formulació", "formulacio"]),
         clue("Representació visual de dades, molt utilitzada en cinemàtica.", ["gràfica", "grafica"]),
         clue("Element químic més lleuger de la taula periòdica.", ["hidrogen"]),
-        clue("Àtom o grup d'àtoms amb càrrega elèctrica.", ["ió", "io"]),
+        clue("Espècie química que ha guanyat o perdut electrons i té càrrega elèctrica.", ["ió", "io"]),
         clue("Unitat d'energia del Sistema Internacional.", ["joule", "joules", "juls"]),
         clue("Escala absoluta de temperatura.", ["kelvin"]),
         clue("Element químic del període 2 i grup 1 de la taula periòdica.", ["liti"]),
         clue("Unitat de quantitat de substància del Sistema Internacional.", ["mol"]),
-        clue("Partícula subatòmica sense càrrega elèctrica.", ["neutró", "neutro"]),
+        clue("Partícula subatòmica del nucli sense càrrega elèctrica.", ["neutró", "neutro"]),
         clue("Regió de l'espai on és probable trobar un electró.", ["orbital"]),
         clue("Nom general de certes lleis clàssiques de la química.", ["ponderals"]),
         clue("Ciència que estudia la composició i transformació de la matèria.", ["química", "quimica"]),
@@ -40,9 +40,9 @@ const BANKS = {
     bank2: [
         clue("Canvi de velocitat per unitat de temps.", ["acceleració", "acceleracio"]),
         clue("Element químic del període 2 i grup 13 de la taula periòdica.", ["bor"]),
-        clue("Ió amb càrrega positiva.", ["catió", "catio"]),
+        clue("Espècie química amb càrrega elèctrica positiva.", ["catió", "catio"]),
         clue("Magnitud que relaciona la massa i el volum d'una substància.", ["densitat"]),
-        clue("Partícula subatòmica amb càrrega negativa.", ["electró", "electro"]),
+        clue("Partícula subatòmica de càrrega negativa.", ["electró", "electro"]),
         clue("Magnitud capaç de modificar l'estat de moviment d'un cos.", ["força", "forca"]),
         clue("Acceleració amb què la Terra atrau els cossos.", ["gravetat"]),
         clue("Element químic noble del període 1.", ["heli"]),
@@ -53,7 +53,7 @@ const BANKS = {
         clue("Distància recorreguda en una trajectòria.", ["longitud"]),
         clue("Conjunt de regles per posar nom als compostos químics.", ["nomenclatura"]),
         clue("Procés químic en què una espècie perd electrons.", ["oxidació", "oxidacio"]),
-        clue("Partícula subatòmica amb càrrega positiva.", ["protó", "proto"]),
+        clue("Partícula subatòmica del nucli amb càrrega positiva.", ["protó", "proto"]),
         clue("Ciència que estudia la matèria a escala molt petita.", ["quark"]),
         clue("Procés químic en què una espècie guanya electrons.", ["reducció", "reduccio"]),
         clue("Element químic del període 3 i grup 1 de la taula periòdica.", ["sodi"]),
@@ -74,16 +74,16 @@ const BANKS = {
         clue("Compost binari de l'oxigen amb un altre element.", ["òxid", "oxid"]),
         clue("Canvi de posició d'un cos respecte d'un sistema de referència.", ["moviment"]),
         clue("Nom tradicional de l'àcid H2S.", ["sulfhídric", "sulfhidric"]),
-        clue("Espècie química amb càrrega elèctrica neta.", ["ió", "io"]),
+        clue("Espècie química que presenta una càrrega elèctrica neta.", ["ió", "io"]),
         clue("Unitat d'energia del Sistema Internacional.", ["joule", "joules", "juls"]),
         clue("Escala absoluta de temperatura utilitzada en ciència.", ["kelvin"]),
         clue("Nom general d'un conjunt de lleis clàssiques de la química.", ["ponderals"]),
         clue("Unitat de quantitat de substància.", ["mol"]),
         clue("Part central de l'àtom on hi ha protons i neutrons.", ["nucli"]),
-        clue("Família d'àcids que contenen oxigen.", ["oxoàcid", "oxoacid"]),
-        clue("Partícula subatòmica amb càrrega positiva.", ["protó", "proto"]),
-        clue("Procés en què unes substàncies es transformen en unes altres.", ["reacció", "reaccio"]),
-        clue("Substància inicial que participa en una reacció.", ["reactiu"]),
+        clue("Compost format per hidrogen, oxigen i un altre element.", ["oxoàcid", "oxoacid"]),
+        clue("Partícula subatòmica del nucli amb càrrega positiva.", ["protó", "proto"]),
+        clue("Procés en què unes substàncies es transformen en unes altres de noves.", ["reacció", "reaccio"]),
+        clue("Substància inicial que participa en una transformació química.", ["reactiu"]),
         clue("Element químic de símbol S.", ["sulfur", "sofre"]),
         clue("Cognom del model atòmic del púding de panses.", ["thomson"]),
         clue("Partícula de la llum que transporta energia electromagnètica.", ["fotó", "foto"]),
@@ -94,11 +94,11 @@ const BANKS = {
         clue("Element químic metàl·lic de símbol Zn.", ["zinc"])
     ],
     bank4: [
-        clue("Substància que té gust àcid i pH menor que 7.", ["àcid", "acid"]),
+        clue("Substància que en dissolució aquosa té un pH inferior a 7.", ["àcid", "acid"]),
         clue("Element químic del període 2 i grup 2 de la taula periòdica.", ["beril·li", "berilli"]),
         clue("Propietat elèctrica de protons i electrons.", ["càrrega", "carrega"]),
         clue("Moviment espontani de partícules d'una zona més concentrada a una de menys concentrada.", ["difusió", "difusio"]),
-        clue("Partícula subatòmica amb càrrega negativa.", ["electró", "electro"]),
+        clue("Partícula subatòmica de càrrega negativa.", ["electró", "electro"]),
         clue("Representació simbòlica d'un compost o substància.", ["fórmula", "formula"]),
         clue("Estat de la matèria sense forma ni volum fixos.", ["gas"]),
         clue("Element químic noble del període 1.", ["heli"]),
@@ -109,7 +109,7 @@ const BANKS = {
         clue("Magnitud que indica la quantitat de matèria d'un cos.", ["massa"]),
         clue("Suma de protons i neutrons del nucli d'un àtom.", ["nucleons"]),
         clue("Element químic del període 3 i grup 14 de la taula periòdica.", ["silici"]),
-        clue("Partícula subatòmica sense càrrega elèctrica.", ["neutró", "neutro"]),
+        clue("Partícula subatòmica del nucli sense càrrega elèctrica.", ["neutró", "neutro"]),
         clue("Element químic del període 3 i grup 18 de la taula periòdica.", ["argó", "argo"]),
         clue("Científic que va descriure un model nuclear de l'àtom.", ["rutherford"]),
         clue("Element químic del període 3 i grup 16 de la taula periòdica.", ["sofre", "sulfur"]),
@@ -472,6 +472,17 @@ function applyResult(result) {
 
     if (allTeamsFinished()) {
         finishGame();
+        return;
+    }
+
+    if (result === "correct") {
+        if (isTeamFinished(activeTeamId) || teams[activeTeamId].timeLeft <= 0) {
+            switchTurn(true);
+            return;
+        }
+
+        updateQuestionCard();
+        startTimer();
         return;
     }
 
