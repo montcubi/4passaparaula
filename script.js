@@ -21,49 +21,49 @@ const BANKS = {
         clue("Àtom o grup d'àtoms amb càrrega elèctrica.", ["ió", "io"]),
         clue("Unitat d'energia del Sistema Internacional.", ["joule", "joules", "juls"]),
         clue("Escala absoluta de temperatura.", ["kelvin"]),
-        clue("Científic relacionat amb la teoria atòmica moderna.", ["dalton"]),
+        clue("Element químic del període 2 i grup 1 de la taula periòdica.", ["liti"]),
         clue("Unitat de quantitat de substància del Sistema Internacional.", ["mol"]),
         clue("Partícula subatòmica sense càrrega elèctrica.", ["neutró", "neutro"]),
-        clue("Element químic del període 3 i grup 17 de la taula periòdica.", ["clor"]),
+        clue("Regió de l'espai on és probable trobar un electró.", ["orbital"]),
         clue("Nom general de certes lleis clàssiques de la química.", ["ponderals"]),
         clue("Ciència que estudia la composició i transformació de la matèria.", ["química", "quimica"]),
         clue("Substàncies inicials d'una reacció química.", ["reactius"]),
         clue("Element químic no metàl·lic de símbol S.", ["sulfur", "sofre"]),
         clue("Model atòmic conegut pel descobriment de l'electró.", ["thomson"]),
-        clue("Compost binari format per oxigen i un altre element.", ["òxid", "oxid"]),
+        clue("Ones sonores de freqüència superior a la que pot sentir l'orella humana.", ["ultrasons"]),
         clue("Magnitud que indica l'espai recorregut per unitat de temps i direcció.", ["velocitat"]),
         clue("Unitat de potència del Sistema Internacional.", ["watt"]),
-        clue("Àcid oxigenat format per hidrogen, oxigen i un altre element.", ["oxoàcid", "oxoacid"]),
+        clue("Conjunt de colors o longituds d'ona que apareix quan es descompon la llum.", ["espectre"]),
         clue("Element químic del període 3 i grup 13 de la taula periòdica.", ["alumini"]),
         clue("Element químic metàl·lic de símbol Zn.", ["zinc"])
     ],
     bank2: [
         clue("Canvi de velocitat per unitat de temps.", ["acceleració", "acceleracio"]),
-        clue("Cognom del científic que va proposar els nivells energètics de l'àtom.", ["bohr"]),
-        clue("Factor numèric que acompanya una fórmula química en una equació ajustada.", ["coeficient"]),
-        clue("Científic de la teoria atòmica moderna.", ["dalton"]),
+        clue("Element químic del període 2 i grup 13 de la taula periòdica.", ["bor"]),
+        clue("Ió amb càrrega positiva.", ["catió", "catio"]),
+        clue("Magnitud que relaciona la massa i el volum d'una substància.", ["densitat"]),
         clue("Partícula subatòmica amb càrrega negativa.", ["electró", "electro"]),
         clue("Magnitud capaç de modificar l'estat de moviment d'un cos.", ["força", "forca"]),
-        clue("Representació de la posició, la velocitat o l'acceleració en funció del temps.", ["gràfica", "grafica"]),
-        clue("Element químic de nombre atòmic 1.", ["hidrogen"]),
-        clue("Ió amb càrrega positiva.", ["catió", "catio"]),
+        clue("Acceleració amb què la Terra atrau els cossos.", ["gravetat"]),
+        clue("Element químic noble del període 1.", ["heli"]),
+        clue("Àtoms del mateix element amb diferent nombre de neutrons.", ["isòtop", "isotop"]),
         clue("Magnitud associada a la capacitat de produir canvis.", ["energia"]),
-        clue("Element químic de símbol K.", ["potassi"]),
+        clue("Magnitud fonamental del Sistema Internacional per a la massa.", ["kilogram"]),
         clue("Instrument de laboratori per mesurar volums de líquids.", ["proveta"]),
-        clue("Diagrama utilitzat per distribuir els electrons en capes i subnivells.", ["moeller", "möller"]),
+        clue("Distància recorreguda en una trajectòria.", ["longitud"]),
         clue("Conjunt de regles per posar nom als compostos químics.", ["nomenclatura"]),
-        clue("Trajectòria definida dels electrons en el model de Bohr.", ["òrbita", "orbita"]),
-        clue("Partícula subatòmica amb càrrega positiva.", ["protó", "proto"]),
-        clue("Disciplina que permet calcular quantitats de substància en una reacció.", ["estequiometria"]),
-        clue("Procés químic en què una espècie guanya electrons.", ["reducció", "reduccio"]),
-        clue("Element químic de símbol S, també anomenat sulfur.", ["sofre", "sulfur"]),
-        clue("Model atòmic del púding de panses.", ["thomson"]),
         clue("Procés químic en què una espècie perd electrons.", ["oxidació", "oxidacio"]),
-        clue("Magnitud vectorial que expressa el canvi de posició per unitat de temps.", ["velocitat"]),
-        clue("Cognom associat a la unitat de potència.", ["watt"]),
-        clue("Àcid que conté oxigen a la seva fórmula.", ["oxoàcid", "oxoacid"]),
-        clue("Element químic del període 3 i grup 2 de la taula periòdica.", ["magnesi"]),
-        clue("Element metàl·lic de símbol Zn.", ["zinc"])
+        clue("Partícula subatòmica amb càrrega positiva.", ["protó", "proto"]),
+        clue("Ciència que estudia la matèria a escala molt petita.", ["quark"]),
+        clue("Procés químic en què una espècie guanya electrons.", ["reducció", "reduccio"]),
+        clue("Element químic del període 3 i grup 1 de la taula periòdica.", ["sodi"]),
+        clue("Magnitud que mesura el grau d'agitació tèrmica.", ["temperatura"]),
+        clue("Element químic radioactiu de símbol U que s'utilitza com a combustible en centrals nuclears.", ["urani"]),
+        clue("Capacitat de combinació d'un element en formar compostos.", ["valència", "valencia"]),
+        clue("Element químic de símbol W.", ["wolframi"]),
+        clue("Col·lisió entre dos cossos.", ["xoc"]),
+        clue("Element químic de símbol Y.", ["itri", "ytri"]),
+        clue("Valor nul d'una magnitud.", ["zero"])
     ],
     bank3: [
         clue("Partícula que constitueix la matèria i conserva les propietats d'un element.", ["àtom", "atom"]),
@@ -86,40 +86,40 @@ const BANKS = {
         clue("Substància inicial que participa en una reacció.", ["reactiu"]),
         clue("Element químic de símbol S.", ["sulfur", "sofre"]),
         clue("Cognom del model atòmic del púding de panses.", ["thomson"]),
-        clue("Substància obtinguda al final d'una reacció química.", ["producte"]),
+        clue("Partícula de la llum que transporta energia electromagnètica.", ["fotó", "foto"]),
         clue("Capacitat de combinació d'un element en formar compostos.", ["valència", "valencia"]),
-        clue("Unitat de potència elèctrica o mecànica.", ["watt"]),
-        clue("Compost binari d'oxigen amb un altre element.", ["òxid", "oxid"]),
+        clue("Element químic de símbol W.", ["wolframi"]),
+        clue("Col·lisió entre dos cossos.", ["xoc"]),
         clue("Element químic del període 3 i grup 1 de la taula periòdica.", ["sodi"]),
         clue("Element químic metàl·lic de símbol Zn.", ["zinc"])
     ],
     bank4: [
-        clue("Partícula bàsica que conserva les propietats d'un element.", ["àtom", "atom"]),
-        clue("Cognom del científic del model amb nivells energètics.", ["bohr"]),
-        clue("Nombre que acompanya les substàncies en una equació química ajustada.", ["coeficient"]),
-        clue("Científic associat a la teoria atòmica moderna.", ["dalton"]),
-        clue("Part de la química que treballa les proporcions entre substàncies.", ["estequiometria"]),
+        clue("Substància que té gust àcid i pH menor que 7.", ["àcid", "acid"]),
+        clue("Element químic del període 2 i grup 2 de la taula periòdica.", ["beril·li", "berilli"]),
+        clue("Propietat elèctrica de protons i electrons.", ["càrrega", "carrega"]),
+        clue("Moviment espontani de partícules d'una zona més concentrada a una de menys concentrada.", ["difusió", "difusio"]),
+        clue("Partícula subatòmica amb càrrega negativa.", ["electró", "electro"]),
         clue("Representació simbòlica d'un compost o substància.", ["fórmula", "formula"]),
-        clue("Representació visual de magnituds com posició, velocitat o temps.", ["gràfica", "grafica"]),
-        clue("Element químic més simple de la taula periòdica.", ["hidrogen"]),
-        clue("Espècie química amb càrrega elèctrica.", ["ió", "io"]),
-        clue("Unitat d'energia del Sistema Internacional.", ["joule", "joules", "juls"]),
-        clue("Element químic de símbol K.", ["potassi"]),
+        clue("Estat de la matèria sense forma ni volum fixos.", ["gas"]),
+        clue("Element químic noble del període 1.", ["heli"]),
+        clue("Àtoms de diferents elements amb el mateix nombre màssic.", ["isòbar", "isobar"]),
+        clue("Forma alternativa de dir joules en català escolar.", ["juls"]),
+        clue("Element químic noble de símbol Kr.", ["kripton"]),
         clue("Unitat de capacitat molt utilitzada al laboratori.", ["litre"]),
-        clue("Diagrama utilitzat per ordenar la configuració electrònica.", ["moeller", "möller"]),
-        clue("Part central de l'àtom on es concentra gairebé tota la massa.", ["nucli"]),
+        clue("Magnitud que indica la quantitat de matèria d'un cos.", ["massa"]),
+        clue("Suma de protons i neutrons del nucli d'un àtom.", ["nucleons"]),
         clue("Element químic del període 3 i grup 14 de la taula periòdica.", ["silici"]),
-        clue("Nom general de certes lleis clàssiques de la química.", ["ponderals"]),
-        clue("Ciència que estudia la matèria i els seus canvis.", ["química", "quimica"]),
+        clue("Partícula subatòmica sense càrrega elèctrica.", ["neutró", "neutro"]),
+        clue("Element químic del període 3 i grup 18 de la taula periòdica.", ["argó", "argo"]),
         clue("Científic que va descriure un model nuclear de l'àtom.", ["rutherford"]),
-        clue("Element químic no metàl·lic de símbol S.", ["sulfur", "sofre"]),
-        clue("Cognom del descobridor de l'electró.", ["thomson"]),
-        clue("Compost binari de l'oxigen amb un altre element.", ["òxid", "oxid"]),
+        clue("Element químic del període 3 i grup 16 de la taula periòdica.", ["sofre", "sulfur"]),
+        clue("Magnitud que mesura el grau d'agitació tèrmica.", ["temperatura"]),
+        clue("Element químic radioactiu de símbol U que s'utilitza com a combustible en centrals nuclears.", ["urani"]),
         clue("Magnitud que relaciona espai recorregut i temps.", ["velocitat"]),
         clue("Unitat de potència del Sistema Internacional.", ["watt"]),
         clue("Element químic del període 3 i grup 15 de la taula periòdica.", ["fòsfor", "fosfor"]),
-        clue("Element químic del període 3 i grup 16 de la taula periòdica.", ["sofre", "sulfur"]),
-        clue("Element químic de símbol Zn.", ["zinc"])
+        clue("Element químic de símbol Y.", ["itri", "ytri"]),
+        clue("Valor nul d'una magnitud.", ["zero"])
     ]
 };
 
@@ -173,6 +173,7 @@ let teams = {};
 let activeTeamId = "A";
 let timerInterval = null;
 let gameRunning = false;
+let reviewMode = false;
 
 function normalize(text) {
     return text
@@ -227,11 +228,35 @@ function buildRosco(teamId) {
         const letterEl = document.createElement("div");
         letterEl.className = "letter pending";
         letterEl.id = `letter-${teamId}-${index}`;
+        letterEl.dataset.teamId = teamId;
+        letterEl.dataset.index = String(index);
         letterEl.textContent = letter;
         letterEl.style.left = `calc(${x}% - 6.5%)`;
         letterEl.style.top = `calc(${y}% - 6.5%)`;
+        letterEl.addEventListener("click", handleLetterClick);
         roscoEl.appendChild(letterEl);
     });
+}
+
+function handleLetterClick(event) {
+    if (gameRunning) {
+        return;
+    }
+
+    const teamId = event.currentTarget.dataset.teamId;
+    const index = Number.parseInt(event.currentTarget.dataset.index, 10);
+    const team = teams[teamId];
+    const clueData = team.questions[index];
+    if (!clueData) {
+        return;
+    }
+
+    reviewMode = true;
+    currentTurn.textContent = `Revisió del rosco de ${team.name}`;
+    currentLetter.textContent = LETTERS[index];
+    questionIndex.textContent = `Rosco ${teamId} · ${team.statuses[index]}`;
+    questionText.textContent = clueData.text;
+    setFeedback("info", `Resposta: ${clueData.answers[0]}.`);
 }
 
 function updateRosco(teamId) {
@@ -501,6 +526,7 @@ function passQuestion() {
 
 function finishGame() {
     gameRunning = false;
+    reviewMode = true;
     stopTimer();
     setControls(false);
     updateRosco("A");
@@ -522,7 +548,7 @@ function finishGame() {
     currentTurn.textContent = message;
     currentLetter.textContent = "-";
     questionIndex.textContent = `A ${teamA.score} · B ${teamB.score}`;
-    questionText.textContent = "No queden més preguntes disponibles per als equips.";
+    questionText.textContent = "No queden més preguntes disponibles. Pots clicar qualsevol lletra dels roscos per revisar la pista i la resposta.";
 }
 
 function initializeTeams() {
@@ -544,6 +570,7 @@ function startGame() {
     buildRosco("B");
     activeTeamId = "A";
     gameRunning = true;
+    reviewMode = false;
     roundTitle.textContent = ROUND_LABELS[roundSelect.value];
     setControls(true);
     setFeedback("info", "Partida iniciada.");
@@ -555,6 +582,7 @@ function startGame() {
 function resetGame() {
     stopTimer();
     gameRunning = false;
+    reviewMode = false;
     initializeTeams();
     buildRosco("A");
     buildRosco("B");
